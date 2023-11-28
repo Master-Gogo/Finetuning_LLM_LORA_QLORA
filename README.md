@@ -1,4 +1,18 @@
 # Finetuning_LLM_LORA_QLORA
+**Steps to finetune LLM using LORA**
+step 1: select base model, tockenizer and dataset
+step 2: Define Lora configuration like dropout, r value etc.
+step 3: add addapter layer to base model to be trained
+model=get_peft_model(base_model,lora_config)
+step 4: Train model 
+step 5: Inference**
+refer: https://www.datacamp.com/tutorial/fine-tuning-llama-2 and 
+https://www.predera.com/blog/llm-finetuning-with-lora-and-qlora
+**Steps to finetune LLM using QLORA**
+step 1: select the LLM model and quantized to 4-bit to reduce size using BitsAndBytesConfig  as base model
+step 2: for remaining step follow from step 2 of LORA 
+
+
 refer this for more understanding about LORA and QLORA and experiments
 https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms
 
